@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class KaitBirdScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
+    public float flapStrength;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +16,7 @@ public class KaitBirdScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            myRigidbody.linearVelocity = Vector2.up * 10;
+            myRigidbody.linearVelocity = Vector2.up * flapStrength;
         }
         
     }
